@@ -7,6 +7,9 @@ def index(request):
 def inputs(request):
 	return render(request, 'inputs.html')
 
+def contacto(request):
+	return render(request, 'contacto.html')
+
 
 def recuperar(request):
 	diccionario={}
