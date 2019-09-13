@@ -9,73 +9,73 @@ Agenda
 
 <div id="descripcion" class="container">
     <h1>Agenda tu cita</h1>
+    <br>
 
 <!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+	
+	<h2>Datos del amo</h2>
 
-    <form action="/mostrar_resultado" method="POST" autocomplete="off">  {% csrf_token %}
+    <form action="" method="POST" autocomplete="off">  {% csrf_token %}
 
     <div class="form-group">
       <label for="exampleInputEmail1">Nombre:</label>
-      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese su nombre" name="inputNombre">
+      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese su nombre" name="inputText">
     </div>
 
     <div class="form-group">
-      <label for="exampleNumber">Edad:</label>
-      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese su edad" name="inputEdad">
+      <label for="exampleNumber">RUT (sin puntos ni dígito verificador):</label>
+      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese su RUT" name="inputNumber">
     </div>
 
     <div class="form-group">
       <label for="exampleInputEmail1">Correo electrónico:</label>
-      <input type="email" class="form-control" id="exampleEmail" placeholder="Ingrese su email" name="inputEmail">
+      <input type="email" class="form-control" id="exampleEmail" placeholder="Ingrese su correo" name="inputEmail">
     </div>
+    <br>
 
-    Departamento:
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="DII" checked>
-      <label class="form-check-label" for="exampleRadios1">
-        DII
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="DCC">
-      <label class="form-check-label" for="exampleRadios2">
-        DCC
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="IQBT">
-      <label class="form-check-label" for="exampleRadios3">
-        IQBT
-      </label>
-    </div>
+    <h2>Datos de la mascota</h2>
 
     <div class="form-group">
-      <label for="exampleFormControlSelect1">Tema preferido para la actividad:</label>
-      <select class="form-control" id="exampleSelect" name="inputTema">
-        <option value="Animales">Animales</option>
-        <option value="Deportes">Deportes</option>
-        <option value="Escritores">Escritores</option>
+      <label for="exampleInputEmail1">Nombre:</label>
+      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese su nombre" name="inputText">
+    </div>
+
+    Especie:
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+      <label class="form-check-label" for="exampleRadios1">
+        Perro
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+      <label class="form-check-label" for="exampleRadios2">
+        Gato
+      </label>
+    </div>
+    <br>
+
+    <h2>Agenda</h2>
+
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Seleccione el tipo de atención:</label>
+      <select class="form-control" id="exampleSelect" name="input Select">
+        <option value="1">Consulta veterinaria</option>
+        <option value="2">Laboratorio clínico</option>
+        <option value="3">Radiografía/Ecografía</option>
+        <option value="4">Peluquería</option>
       </select>
     </div>
 
-    Opciones de comida:
     <div class="form-group">
-
-    <div class="form-check form-check-inline" >
-      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="inputComida1">
-      <label class="form-check-label" for="exampleCheck1">Bebestible</label>
+      <label for="exampleNumber">Seleccione el día de su cita:</label>
+      <input type="date" class="form-control" id="exampleDate" placeholder="Ingrese Fecha" name="inputDate">
     </div>
 
-
-    <div class="form-check form-check-inline" >
-      <input type="checkbox" class="form-check-input" id="exampleCheck2" name="inputComida2">
-      <label class="form-check-label" for="exampleCheck2">Snacks</label>
-    </div>
-
-    <div class="form-check form-check-inline" >
-      <input type="checkbox" class="form-check-input" id="exampleCheck3" name="inputComida3">
-      <label class="form-check-label" for="exampleChec3">Cena</label>
-    </div>
+    <div>
+    	<label for="appt">Escoja la hora:</label>
+		<input type="time" id="appt" name="appt"
+       min="09:00" max="18:00" required>
     </div>
 
     <br>

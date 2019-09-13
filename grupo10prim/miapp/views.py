@@ -10,6 +10,15 @@ def inputs(request):
 def contacto(request):
 	return render(request, 'contacto.html')
 
+def agenda(request):
+	return render(request, 'agenda.html')
+
+def catalogo(request):
+	return render(request, 'catalogo.html')
+
+def backoffice(request):
+	return render(request, 'backoffice.html')
+
 
 def recuperar(request):
 	diccionario={}
