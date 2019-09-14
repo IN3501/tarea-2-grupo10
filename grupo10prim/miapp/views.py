@@ -11,6 +11,7 @@ def contacto(request):
 	return render(request, 'contacto.html')
 
 
+					
 def recuperar(request):
 	diccionario={}
 
