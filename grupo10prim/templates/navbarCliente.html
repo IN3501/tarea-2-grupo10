@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 
 {% block body %}
+<style>
+    .stick-to-right {
+        width: 250px;
+        float: right;
+    }
+</style>
+
   <nav class="navbar navbar-expand-lg navbar-dark"style="background-color: #6c4675;">
     <a class="navbar-brand" href="#">LaSos Pet</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,6 +29,9 @@
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="{% url 'catalogo' %}">Catálogo</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="">Carro</a>
         </li>
 
         <!--<div class="form-group">

@@ -33,6 +33,9 @@ def estadisticas(request):
 def inventario(request):
 	return render(request, 'inventario.html')
 
+def comprarObjeto(request):
+        return render(request,'comprarObjeto.html')
+
 
 					
 def recuperar(request):
