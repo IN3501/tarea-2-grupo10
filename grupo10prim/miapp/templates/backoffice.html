@@ -1,5 +1,5 @@
 
-{% extends 'navbarCliente.html' %}
+{% extends 'navbarBackoffice.html' %}
 
 
 {% block title %}
@@ -12,13 +12,12 @@ Back Office
 
 <!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
 
-    <form action="" method="POST" autocomplete="off">  {% csrf_token %}
+    <form action="homeEmpresa" method="POST" autocomplete="off">  {% csrf_token %}
     <br><br><br><br><br><br> <ul><ul><ul><ul><ul><ul><ul><ul><ul><ul><ul><ul><ul><ul><!--intento de centrado-->
     <div class="card" style="width: 18rem;">
   
        <div class="card-body">
-           <h5 class="card-title">Iniciar Sesión</h5>
-           <p class="card-text">Backoffice</p>
+           <h5 class="card-title">Control de Acceso</h5>
 
            <div class="form-group">
              <label for="exampleInputEmail1">Usuario:</label>
@@ -30,7 +29,7 @@ Back Office
              <input type="password" class="form-control" id="examplePassword" placeholder="Ingrese contraseña" name="inputPassword">
            </div>
 
-           <a href="#" class="btn btn-primary">Go somewhere</a>
+           <a href="{% url 'homeEmpresa' %}" class="btn btn-primary">Ingresar</a>
        </div>
     </div>
     

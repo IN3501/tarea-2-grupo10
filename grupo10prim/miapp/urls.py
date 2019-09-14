@@ -8,5 +8,10 @@ urlpatterns = [
 	path('contacto', contacto, name='contacto'),
 	path('agenda', agenda, name = 'agenda'),
 	path('catalogo', catalogo, name = 'catalogo'),
-	path('backoffice', backoffice, name = 'backoffice')
+
+	path('backoffice', backoffice, name = 'backoffice'),
+	path('homeEmpresa', homeEmpresa, name = 'homeEmpresa'),
+	path('fichaClinica', fichaClinica, name = 'fichaClinica'),
+	path('estadisticas', estadisticas, name = 'estadisticas'),
+	path('inventario', inventario, name = 'inventario')
 ]

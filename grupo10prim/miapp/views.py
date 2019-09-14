@@ -16,8 +16,22 @@ def agenda(request):
 def catalogo(request):
 	return render(request, 'catalogo.html')
 
+
+
 def backoffice(request):
 	return render(request, 'backoffice.html')
+
+def homeEmpresa(request):
+	return render(request, 'homeEmpresa.html')
+
+def fichaClinica(request):
+	return render(request, 'fichaClinica.html')
+
+def estadisticas(request):
+	return render(request, 'estadisticas.html')
+
+def inventario(request):
+	return render(request, 'inventario.html')
 
 
 					
