@@ -1,14 +1,23 @@
 from django.shortcuts import render
 
 # Create your views here.
-def index(request):
-	return render(request, 'home.html')
+def homeCliente(request):
+	return render(request, 'homeCliente.html')
 
 def inputs(request):
 	return render(request, 'inputs.html')
 
 def contacto(request):
 	return render(request, 'contacto.html')
+
+def agenda(request):
+	return render(request, 'agenda.html')
+
+def catalogo(request):
+	return render(request, 'catalogo.html')
+
+def backoffice(request):
+	return render(request, 'backoffice.html')
 
 
 					
