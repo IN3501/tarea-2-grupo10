@@ -1,4 +1,5 @@
 
+{% extends 'navbarCliente.html' %}
 
 
 {% block title %}
@@ -6,29 +7,42 @@ Back Office
 {% endblock title %}
 
 
+{% block content %}
 
 
 <!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
 
     <form action="" method="POST" autocomplete="off">  {% csrf_token %}
+    <br><br><br><br><br><br> <ul><ul><ul><ul><ul><ul><ul><ul><ul><ul><ul><ul><ul><ul><!--intento de centrado-->
+    <div class="card" style="width: 18rem;">
+  
+       <div class="card-body">
+           <h5 class="card-title">Iniciar Sesión</h5>
+           <p class="card-text">Backoffice</p>
 
-    <div class="form-group">
-      <label for="exampleInputEmail1">Usuario:</label>
-      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese su nombre" name="inputNombre">
+           <div class="form-group">
+             <label for="exampleInputEmail1">Usuario:</label>
+              <input type="text" class="form-control" id="exampleText" placeholder="Ingrese su nombre" name="inputNombre">
+           </div>
+
+           <div class="form-group">
+            <label for="exampleInputPassword1">Clave:</label>
+             <input type="password" class="form-control" id="examplePassword" placeholder="ingrese contraseña" name="inputPassword">
+           </div>
+
+           <a href="#" class="btn btn-primary">Go somewhere</a>
+       </div>
     </div>
+    
 
-    <div class="form-group">
-      <label for="exampleInputPassword1">Clave:</label>
-      <input type="password" class="form-control" id="examplePassword" placeholder="ingrese contraseña" name="inputPassword">
-    </div>
-
-    <br>
+   <!--<br>
 
     <div class="form-group">
     <button type="submit" class="btn btn-primary">Ingresar</button>
-    </div>
+    </div>-->
   
   </form>
        
 
 
+{% endblock content %}
