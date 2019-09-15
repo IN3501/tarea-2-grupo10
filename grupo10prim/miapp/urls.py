@@ -14,5 +14,7 @@ urlpatterns = [
     path('fichaClinica', fichaClinica, name='fichaClinica'),
     path('estadisticas', estadisticas, name='estadisticas'),
     path('inventario', inventario, name='inventario'),
-    path('comprar', comprarObjeto, name='comprarObjeto')
+    path('comprar', comprarObjeto, name='comprarObjeto'),
+    path('agregarElemento', agregarElemento, name='agregarElemento'),
+    path('envioInventario',envioInventario, name='envioInventario')
 ]
