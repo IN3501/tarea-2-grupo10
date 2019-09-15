@@ -45,6 +45,8 @@ def inventario(request):
 def comprarObjeto(request):
     return render(request, 'comprarObjeto.html')
 
+def agendaReg(request):
+    return render(request, 'agendaReg.html')
 
 def recuperar(request):
     diccionario = {}

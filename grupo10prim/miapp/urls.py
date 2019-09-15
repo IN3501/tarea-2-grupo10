@@ -7,6 +7,7 @@ urlpatterns = [
     path('contacto', contacto, name='contacto'),
     path('agenda', agenda, name='agenda'),
     path('catalogo', catalogo, name='catalogo'),
+    path('agendaReg', agendaReg, name = 'agendaReg'),
 
     path('backoffice', backoffice, name='backoffice'),
     path('homeEmpresa', homeEmpresa, name='homeEmpresa'),
