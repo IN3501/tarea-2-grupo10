@@ -61,9 +61,4 @@ def recuperar(request):
     if (name3):
         diccionario["Cena"] = "Cena"
 
-    edad = request.POST["inputEdad"]
-    email = request.POST["inputEmail"]
-
-    diccionario["Edad"] = edad
-
     return render(request, "mostrar_resultado.html", diccionario)
