@@ -21,3 +21,7 @@ def recuperar_registro(request):
     email = request.POST["input_mail"]
     diccionario = {"nombre": name, "apellido": last_name, "rut": rut, "email": email}
     return render(request, 'mostrar_resultado.html', diccionario)
+
+
+def add_pet(request):
+    return render(request, 'add_pet.html')

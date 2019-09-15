@@ -1,19 +1,21 @@
-
 {% extends 'navbarCliente.html' %}
 
 {% block title %}
-Registro completo{% endblock title %}
+    Perfil de Usuario{% endblock title %}
 
 {% block content %}
-<br>
-<br>
-<br>
-<br>
-<br>
-<h1><p class=" text-center font-weight-light"style="background-color: #51D1F6;">Registro Completo! </h1></p>
+    <blockquote class="blockquote text-center">
+        <br><br><br>
+        <h1 class="text-white" style="background-color: #B19CD9;"> Perfil de Usuario </h1>
+    </blockquote>
+    <h2>Datos del Cliente</h2><br>
+    <h5> Nombre:</h5><br>
+    <h5> Correo electrónico:</h5><br>
+    <h2>Mis Mascotas</h2><br>
 
-<h2> Gracias por registrarte.</h2>
-<p> Estimado/a {{ nombre }} {{ apellido }}, ahora estás registrado.
-    Revisa tu correo electrónico {{ email }} para activar tu cuenta.</p>
+    <a href="add_pet" class="btn btn-success">Agregar Mascota</a>
+
+
+
 
 {% endblock content %}
