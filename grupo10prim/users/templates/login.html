@@ -12,22 +12,23 @@
 
 <body>
 <div class="modal-dialog text-center">
+
     <div class="col-sm-8 main-section">
         <div class="modal-content">
             <div class="col-12 login-img">
                 <img src="../../static/images/login_user.png">
             </div>
-            <form class="col-12">
+            <form action="/registrar_usuario" method="POST" autocomplete="on" class="col-12">  {% csrf_token %}
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Nombre de Usuario"/>
-                </div>
-                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Correo Electrónico"/>
                     <input type="password" class="form-control" placeholder="Contraseña"/>
                 </div>
                 <button type="submit" class="btn btn-primary">Ingresar</button>
-                <button type="submit" class="btn btn-success">Registrarse</button>
-                <p>    <br> </p>
+                <a href="registrar_usuario" class="btn btn-success">Registrarse</a>
+                <p><br></p>
             </form>
+
+
         </div>
 
     </div>
