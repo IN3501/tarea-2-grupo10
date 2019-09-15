@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.urls import path
+from .views import *
 
-# Create your views here.
+urlpatterns = [
+    path('shopping-cart', shopping_cart, name='shopping_cart'),
+    path('payment', payment, name='payment')
+]

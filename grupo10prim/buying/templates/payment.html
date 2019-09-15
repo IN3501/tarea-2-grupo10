@@ -1,70 +1,76 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Payment</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link rel="stylesheet" href="payment.css">
-</head>
-<body>
-  <main class="page payment-page">
-    <section class="payment-form dark">
-      <div class="container">
-        <div class="block-heading">
-          <h2>Payment</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
-        </div>
-        <form>
-          <div class="products">
-            <h3 class="title">Checkout</h3>
-            <div class="item">
-              <span class="price">$200</span>
-              <p class="item-name">Product 1</p>
-              <p class="item-description">Lorem ipsum dolor sit amet</p>
-            </div>
-            <div class="item">
-              <span class="price">$120</span>
-              <p class="item-name">Product 2</p>
-              <p class="item-description">Lorem ipsum dolor sit amet</p>
-            </div>
-            <div class="total">Total<span class="price">$320</span></div>
-          </div>
-          <div class="card-details">
-            <h3 class="title">Credit Card Details</h3>
-            <div class="row">
-              <div class="form-group col-sm-7">
-                <label for="card-holder">Card Holder</label>
-                <input id="card-holder" type="text" class="form-control" placeholder="Card Holder" aria-label="Card Holder" aria-describedby="basic-addon1">
-              </div>
-              <div class="form-group col-sm-5">
-                <label for="">Expiration Date</label>
-                <div class="input-group expiration-date">
-                  <input type="text" class="form-control" placeholder="MM" aria-label="MM" aria-describedby="basic-addon1">
-                  <span class="date-separator">/</span>
-                  <input type="text" class="form-control" placeholder="YY" aria-label="YY" aria-describedby="basic-addon1">
+{% extends 'navbarCliente.html' %}
+
+{% block title %} Finalizar Compra - LaSos Pet{% endblock title %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="../../static/css/payment.css">
+{% endblock head %}
+{% block content %}
+    <main class="page payment-page">
+        <section class="payment-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2>Confirmación de Pago</h2>
+                    <p>Confirme que el monto es correcto y luego ingrese la información de su tarjeta de crédito.
+                        Pronto soportaremos WebPay :-), por mientras meper d0nas?
+                    </p>
                 </div>
-              </div>
-              <div class="form-group col-sm-8">
-                <label for="card-number">Card Number</label>
-                <input id="card-number" type="text" class="form-control" placeholder="Card Number" aria-label="Card Holder" aria-describedby="basic-addon1">
-              </div>
-              <div class="form-group col-sm-4">
-                <label for="cvc">CVC</label>
-                <input id="cvc" type="text" class="form-control" placeholder="CVC" aria-label="Card Holder" aria-describedby="basic-addon1">
-              </div>
-              <div class="form-group col-sm-12">
-                <button type="button" class="btn btn-primary btn-block">Proceed</button>
-              </div>
+                <form>
+                    <div class="products">
+                        <h3 class="title">Resumen</h3>
+                        <div class="item">
+                            <span class="price">$2000</span>
+                            <p class="item-name">Collar de varios colores</p>
+                            <p class="item-description"></p>
+                        </div>
+                        <div class="item">
+                            <span class="price">$4000</span>
+                            <p class="item-name">Ratón de Juguete</p>
+                            <p class="item-description"></p>
+                        </div>
+                        <div class="item">
+                            <span class="price">$1000</span>
+                            <p class="item-name">Juguete para morder</p>
+                            <p class="item-description"></p>
+                        </div>
+                        <div class="total">Total<span class="price">$7000</span></div>
+
+                    </div>
+                    <div class="card-details">
+                        <h3 class="title">Detalles de la Tarjeta de Crédito</h3>
+                        <div class="row">
+                            <div class="form-group col-sm-7">
+                                <label for="card-holder">Nombre que aparece en la tarjeta</label>
+                                <input id="card-holder" type="text" class="form-control" placeholder="Nombre"
+                                       aria-label="Card Holder" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="form-group col-sm-5">
+                                <label for="">Fecha de vencimiento</label>
+                                <div class="input-group expiration-date">
+                                    <input type="text" class="form-control" placeholder="MM" aria-label="MM"
+                                           aria-describedby="basic-addon1">
+                                    <span class="date-separator">/</span>
+                                    <input type="text" class="form-control" placeholder="AA" aria-label="AA"
+                                           aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <label for="card-number">Número de la tarjeta de crédito</label>
+                                <input id="card-number" type="text" class="form-control" placeholder="Ingresa el número"
+                                       aria-label="Card Holder" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="cvc">CVC</label>
+                                <input id="cvc" type="text" class="form-control" placeholder="CVC"
+                                       aria-label="Card Holder"
+                                       aria-describedby="basic-addon1">
+                            </div>
+                            <div class="form-group col-sm-12">
+                                <button type="button" class="btn btn-primary btn-block">Pagar y realizar Pedido</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-</body>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
-</html>
+        </section>
+    </main>
+{% endblock content %}
