@@ -18,10 +18,10 @@
             <div class="col-12 login-img">
                 <img src="../../static/images/login_user.png">
             </div>
-            <form action="/registrar_usuario" method="POST" autocomplete="on" class="col-12">  {% csrf_token %}
+            <form action="/client_profile" method="POST" autocomplete="on" class="col-12">  {% csrf_token %}
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Correo Electrónico"/>
-                    <input type="password" class="form-control" placeholder="Contraseña"/>
+                    <input type="email" class="form-control" placeholder="Correo Electrónico" name="user"/>
+                    <input type="password" class="form-control" placeholder="Contraseña" name="pass"/>
                 </div>
                 <button type="submit" class="btn btn-primary">Ingresar</button>
                 <a href="registrar_usuario" class="btn btn-success">Registrarse</a>

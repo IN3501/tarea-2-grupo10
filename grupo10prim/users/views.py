@@ -6,12 +6,15 @@ def registrar_usuario(request):
     return render(request, 'registrar_usuario.html')
 
 
+def client_profile(request):
+    return render(request, 'client_profile.html')
+
+
 def login(request):
     return render(request, 'login.html')
 
 
 def recuperar_registro(request):
-    print("test")
     name = request.POST["input_name"]
     last_name = request.POST["input_last_name"]
     rut = request.POST["input_rut"]
