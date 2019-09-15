@@ -1,143 +1,74 @@
-
 {% extends 'navbarCliente.html' %}
 
 {% block title %}
-Agenda
+    Agenda
 {% endblock title %}
 
 {% block content %}
 
-<div id="descripcion" class="container">
-  <h1><p class="font-weight-light text-center"style="background-color: #E0F7FA;">Agenda tu Cita</h1></p>
-    <br>
+    <div id="descripcion" class="container">
+        <h1><p class="font-weight-light text-center" style="background-color: #E0F7FA;">Agenda tu Cita</h1>
+        </p>
+        <br>
 
-<!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
-  <form action="" method="POST" autocomplete="off">  {% csrf_token %}
-	<h2>Datos del amo</h2>
+        <!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
 
-    <div class="form-group">
-      <label for="exampleInputEmail1">Nombre:</label>
-      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese su nombre" name="inputText">
+        <h2>Agenda</h2>
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Seleccione el tipo de atención:</label>
+            <select class="form-control" id="exampleSelect" name="input Select">
+                <option value="1">--Seleccione tipo de atención--</option>
+                <option value="2">Consulta veterinaria</option>
+                <option value="3">Laboratorio clínico</option>
+                <option value="4">Radiografía/Ecografía</option>
+                <option value="5">Peluquería</option>
+                <option value="6">Cirugía Veterinaria</option>
+                <option value="7">Implantación de Microchip</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleNumber">Seleccione el día de su cita:</label>
+            <input type="date" class="form-control" id="exampleDate" placeholder="Ingrese Fecha" name="inputDate">
+        </div>
+
+        <div>
+            <label for="appt">Escoja la hora:</label>
+            <input type="time" id="appt" name="appt"
+                   min="09:00" max="18:00" required>
+        </div>
+        <br>
+        <br>
+
+        ¿Su mascota posee todas las vacunas al día?
+        <div class="form-group">
+
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="inputSi">
+                <label class="form-check-label" for="exampleCheck1">Sí</label>
+            </div>
+
+
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="exampleCheck2" name="inputNo">
+                <label class="form-check-label" for="exampleCheck2">No</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="exampleCheck3" name="inputNo_conozco">
+                <label class="form-check-label" for="exampleChec3">No conozco</label>
+            </div>
+            <br>
+            <br>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg">Agendar</button>
+            </div>
+
+
+        </div>
     </div>
 
-    <div class="form-group">
-      <label for="exampleNumber">RUT (sin puntos ni dígito verificador):</label>
-      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese su RUT" name="inputNumber">
-    </div>
-    <div class="form-group">
-      <label for="exampleNumber">Edad:</label>
-      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese su edad" name="inputEdad">
-    </div>
-
-    <div class="form-group">
-      <label for="exampleInputEmail1">Correo electrónico:</label>
-      <input type="email" class="form-control" id="exampleEmail" placeholder="Ingrese su correo" name="inputEmail">
-    </div>
-    <br>
-
-  <h2>Datos de la mascota</h2>
-
-
-    <div class="form-group">
-      <label for="exampleInputEmail1">Nombre de su Mascota:</label>
-      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese nombre de mascota" name="inputNombre">
-    </div>
-
-    <div class="form-group">
-      <label for="exampleNumber">Edad de su Mascota:</label>
-      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese edad de mascota" name="inputEdad">
-    </div>
-
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Sexo de su Mascota</label>
-      <select class="form-control" id="exampleSelect" name="inputTema">
-        <option value="No_Seleccionado">--Seleccione Sexo Mascota--</option>
-        <option value="Hembra">Hembra</option>
-        <option value="Macho">Macho</option>
-      </select>
-    </div>
-    
-    Especie:
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-      <label class="form-check-label" for="exampleRadios1">
-        Perro
-      </label>
-    </div>
-
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-      <label class="form-check-label" for="exampleRadios2">
-        Gato
-      </label>
-    </div>
-
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="IQBT">
-      <label class="form-check-label" for="exampleRadios3">
-        Otro <input type="text" class="form-control" id="exampleText" placeholder="Descripción" name="inputNombre">
-      </label>
-    </div>
-
-    <p>
-    <br>
-
-    <h2>Agenda</h2>
-
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Seleccione el tipo de atención:</label>
-      <select class="form-control" id="exampleSelect" name="input Select">
-        <option value="1">--Seleccione tipo de atención--</option>
-        <option value="2">Consulta veterinaria</option>
-        <option value="3">Laboratorio clínico</option>
-        <option value="4">Radiografía/Ecografía</option>
-        <option value="5">Peluquería</option>
-        <option value="6">Cirugía Veterinaria</option>
-        <option value="7">Implantación de Microchip</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="exampleNumber">Seleccione el día de su cita:</label>
-      <input type="date" class="form-control" id="exampleDate" placeholder="Ingrese Fecha" name="inputDate">
-    </div>
-
-    <div>
-    	<label for="appt">Escoja la hora:</label>
-		<input type="time" id="appt" name="appt"
-       min="09:00" max="18:00" required>
-    </div>
-    <br>
-    <br>
-    
-    ¿Su mascota posee todas las vacunas al día?
-    <div class="form-group">
-
-    <div class="form-check form-check-inline" >
-      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="inputSi">
-      <label class="form-check-label" for="exampleCheck1">Sí</label>
-    </div>
-
-
-    <div class="form-check form-check-inline" >
-      <input type="checkbox" class="form-check-input" id="exampleCheck2" name="inputNo">
-      <label class="form-check-label" for="exampleCheck2">No</label>
-    </div>
-
-    <div class="form-check form-check-inline" >
-      <input type="checkbox" class="form-check-input" id="exampleCheck3" name="inputNo_conozco">
-      <label class="form-check-label" for="exampleChec3">No conozco</label>
-    </div>
-    <br>
-    <br>
-
-    <div class="form-group">
-    <button type="submit" class="btn btn-primary btn-lg">Agendar</button>
-    </div>
-
-
-  </form>
-       
-</div>
 
 {% endblock content %}
