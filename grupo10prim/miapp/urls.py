@@ -8,6 +8,7 @@ urlpatterns = [
     path('agenda', agenda, name='agenda'),
     path('catalogo', catalogo, name='catalogo'),
     path('agendaReg', agendaReg, name = 'agendaReg'),
+    path('contacto_exitoso', contacto_exitoso, name = 'contacto_exitoso'),
 
     path('backoffice', backoffice, name='backoffice'),
     path('homeEmpresa', homeEmpresa, name='homeEmpresa'),

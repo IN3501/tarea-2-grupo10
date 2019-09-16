@@ -54,6 +54,9 @@ def agregarElemento(request):
 def envioInventario(request):
     return render(request,'envioInventario.html')
 
+def contacto_exitoso(request):
+    return render(request, 'contacto_exitoso')
+
 def recuperar(request):
     diccionario = {}
 

@@ -14,6 +14,8 @@ def login(request):
     return render(request, 'login.html')
 
 
+
+
 def recuperar_registro(request):
     name = request.POST["input_name"]
     last_name = request.POST["input_last_name"]
