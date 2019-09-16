@@ -11,7 +11,7 @@ Ficha Clínica
     <br>
 
 <!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
-  <form action="" method="POST" autocomplete="off">  {% csrf_token %}
+  <form action="/resumen_fichaClinica" method="POST" autocomplete="off">  {% csrf_token %}
 
 
  <!-- <h2>Médico Veterinario</h2>
@@ -42,21 +42,21 @@ Ficha Clínica
 
     <div class="form-group">
       <label for="exampleInputEmail1">Nombre del amo de la mascota:</label>
-      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese su nombre" name="inputText">
+      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese su nombre" name="inputNombreAmo">
     </div>
 
     <div class="form-group">
       <label for="exampleNumber">RUT (sin puntos ni dígito verificador):</label>
-      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese su RUT" name="inputNumber">
+      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese su RUT" name="inputRut">
     </div>
     <div class="form-group">
       <label for="exampleNumber">Edad:</label>
-      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese su edad" name="inputEdad">
+      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese su edad" name="inputEdadAmo">
     </div>
 
     <div class="form-group">
       <label for="exampleInputEmail1">Correo electrónico:</label>
-      <input type="email" class="form-control" id="exampleEmail" placeholder="Ingrese su correo" name="inputEmail">
+      <input type="email" class="form-control" id="exampleEmail" placeholder="Ingrese su correo" name="inputEmailAmo">
     </div>
     <br>
 
@@ -65,26 +65,26 @@ Ficha Clínica
 
     <div class="form-group">
       <label for="exampleInputEmail1">Nombre de la Mascota:</label>
-      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese nombre de mascota" name="inputNombre">
+      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese nombre de mascota" name="inputNombreMascota">
     </div>
 
      Especie de la Mascota:
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+      <input class="form-check-input" type="radio" name="exampleRadiosEspecie" id="exampleRadios1" value="Perro" checked>
       <label class="form-check-label" for="exampleRadios1">
         Perro
       </label>
     </div>
 
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+      <input class="form-check-input" type="radio" name="exampleRadiosEspecie" id="exampleRadios2" value="Gato">
       <label class="form-check-label" for="exampleRadios2">
         Gato
       </label>
     </div>
 
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="IQBT">
+      <input class="form-check-input" type="radio" name="exampleRadiosEspecie" id="exampleRadios3" value="IQBT">
       <label class="form-check-label" for="exampleRadios3">
         Otro <input type="text" class="form-control" id="exampleText" placeholder="Descripción" name="inputNombre">
       </label>
@@ -95,12 +95,12 @@ Ficha Clínica
 
     <div class="form-group">
       <label for="exampleNumber">Edad de la Mascota:</label>
-      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese edad de mascota" name="inputEdad">
+      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese edad de mascota" name="inputEdadMascota">
     </div>
 
     <div class="form-group">
       <label for="exampleFormControlSelect1">Sexo de la Mascota:</label>
-      <select class="form-control" id="exampleSelect" name="inputTema">
+      <select class="form-control" id="exampleSelect" name="inputGenero">
         <option value="No_Seleccionado">--Seleccione Sexo Mascota--</option>
         <option value="Hembra">Hembra</option>
         <option value="Macho">Macho</option>
@@ -113,23 +113,23 @@ Ficha Clínica
 
     <br>
     <div class="form-check form-check-inline" >
-      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="inputSi">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="inputEstado1">
       <label class="form-check-label" for="exampleCheck1">Posee vacunas al día</label>
     </div>
 
 
     <div class="form-check form-check-inline" >
-      <input type="checkbox" class="form-check-input" id="exampleCheck2" name="inputNo">
+      <input type="checkbox" class="form-check-input" id="exampleCheck2" name="inputEstado2">
       <label class="form-check-label" for="exampleCheck2">Desparacitado</label>
     </div>
 
     <div class="form-check form-check-inline" >
-      <input type="checkbox" class="form-check-input" id="exampleCheck3" name="inputNo_conozco">
+      <input type="checkbox" class="form-check-input" id="exampleCheck3" name="inputEstado3">
       <label class="form-check-label" for="exampleChec3">Requiere vacunas</label>
     </div>
 
     <div class="form-check form-check-inline" >
-      <input type="checkbox" class="form-check-input" id="exampleCheck3" name="inputNo_conozco">
+      <input type="checkbox" class="form-check-input" id="exampleCheck3" name="inputEstado4">
       <label class="form-check-label" for="exampleChec3">Requiere medicamento para desparacitación</label>
     </div>
     <br>
@@ -145,14 +145,14 @@ Ficha Clínica
 
     ¿Requiere Nueva Hora de atención?
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+      <input class="form-check-input" type="radio" name="exampleRadiosCita" id="exampleRadios1" value="No" checked>
       <label class="form-check-label" for="exampleRadios1">
         No
       </label>
     </div>
 
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+      <input class="form-check-input" type="radio" name="exampleRadiosCita" id="exampleRadios2" value="Sí">
       <label class="form-check-label" for="exampleRadios2">
         Si
       </label>
@@ -175,7 +175,7 @@ Ficha Clínica
 
       <div class="form-group">
         <label for="exampleInputEmail1">Nombre del Médico Veterinario según Área de atención:</label>
-        <input type="text" class="form-control" id="exampleText" placeholder="Ingrese nombre del médico" name="inputText">
+        <input type="text" class="form-control" id="exampleText" placeholder="Ingrese nombre del médico" name="inputMedico">
       </div>
 
       <div class="form-group">

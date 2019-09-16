@@ -69,4 +69,71 @@ def recuperar(request):
     if (name3):
         diccionario["Cena"] = "Cena"
 
+ #  nombre=request.POST["inputNombre"]
+#	edad=request.POST["inputEdad"]
+#	email=request.POST["inputEmail"]
+#	carrera=request.POST["exampleRadios"]
+#	tema=request.POST["inputTema"]
+#
+#	diccionario["Nombre"]=nombre
+#	diccionario["Edad"]=edad
+#	diccionario["Email"]=email
+#	diccionario["Departamento"]=carrera
+#	diccionario["Tematica"]=tema
+
     return render(request, "mostrar_resultado.html", diccionario)
+
+def resumen(request):
+	diccionario={}
+
+	name4 = request.POST.get("inputEstado1")
+	if (name4):
+		diccionario["Vacunado"] = "Posee vacunas al día"
+
+	name5 = request.POST.get("inputEstado2")
+	if (name5):
+		diccionario["Desparacitado"] = "Desparacitado"
+
+	name6 = request.POST.get("inputEstado3")
+	if (name6):
+		diccionario["nuevasVacunas"] = "Requiere vacunas"
+
+	name7 = request.POST.get("inputEstado4")
+	if (name7):
+		diccionario["Medicamento"] = "Requiere medicamento para desparacitación"
+
+
+
+	amo=request.POST["inputNombreAmo"]
+	rut=request.POST["inputRut"]
+	edadAmo=request.POST["inputEdadAmo"]
+	email=request.POST["inputEmailAmo"]
+	mascota=request.POST["inputNombreMascota"]
+	especie=request.POST["exampleRadiosEspecie"]
+	edadMascota=request.POST["inputEdadMascota"]
+	genero=request.POST["inputGenero"]
+	diagnostico=request.POST["textA"]
+	agendarH=request.POST["exampleRadiosCita"]
+	area=request.POST["input Select"]
+	medico=request.POST["inputMedico"]
+	fecha=request.POST["inputDate"]
+	hora=request.POST["appt"]
+
+	
+	diccionario["Amo"]=amo
+	diccionario["Rut"]=rut
+	diccionario["EdadAmo"]=edadAmo
+	diccionario["Email"]=email
+	diccionario["Mascota"]=mascota
+	diccionario["Especie"]=especie
+	diccionario["EdadMascota"]=edadMascota
+	diccionario["Genero"]=genero
+	diccionario["Diagnostico"]=diagnostico
+	diccionario["AgendarH"]=agendarH
+	diccionario["Area"]=area
+	diccionario["Medico"]=medico
+	diccionario["Fecha"]=fecha
+	diccionario["Hora"]=hora
+
+
+	return render(request, "resumen_fichaClinica.html", diccionario)

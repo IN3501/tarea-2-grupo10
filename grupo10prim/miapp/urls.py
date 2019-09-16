@@ -12,6 +12,7 @@ urlpatterns = [
     path('backoffice', backoffice, name='backoffice'),
     path('homeEmpresa', homeEmpresa, name='homeEmpresa'),
     path('fichaClinica', fichaClinica, name='fichaClinica'),
+    path('resumen_fichaClinica', resumen, name='resumen_fichaClinica'),
     path('estadisticas', estadisticas, name='estadisticas'),
     path('inventario', inventario, name='inventario'),
     path('comprar', comprarObjeto, name='comprarObjeto'),
